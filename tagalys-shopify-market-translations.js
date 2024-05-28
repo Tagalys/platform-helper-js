@@ -83,10 +83,9 @@ var TagalysMarketTranslations = {
     });
 
     var responseJson = await response.json();
-    var products = responseJson.data.nodes;
     var productDetailsMap = {};
 
-    products.forEach((product) => {
+    responseJson.data.nodes.forEach((product) => {
       if (product) {
         var productId = product.id.split("/").pop();
         var productVariants = product.variants.edges;
