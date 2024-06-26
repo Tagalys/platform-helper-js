@@ -5,7 +5,7 @@ var TagalysPlatformHelpers = {
     var productNodeIds = productIds.map(
       (productId) => `gid://shopify/Product/${productId}`
     );
-    var response = await fetch(`https://${myShopifyDomain}/api/2023-07/graphql.json`, {
+    var response = await fetch(`https://${myShopifyDomain}/api/2024-04/graphql.json`, {
       body: `
       query allProducts @inContext(country: ${countryCode}) {
         nodes(ids: ${JSON.stringify(productNodeIds)})
