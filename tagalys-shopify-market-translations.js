@@ -32,7 +32,7 @@ var TagalysMarketTranslations = {
 
     var platformVariables = tagalysConfiguration.platformVariables
 
-    var response = await fetch(`https://${platformVariables.myShopifyDomain}/api/2023-07/graphql.json`, {
+    var response = await fetch(`https://${platformVariables.myShopifyDomain}/api/2024-04/graphql.json`, {
       body: `
       query allProducts @inContext(country: ${tagalysConfiguration.countryCode}, language: ${tagalysConfiguration.language}) {
         nodes(ids: ${JSON.stringify(productNodeIds)})
